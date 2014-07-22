@@ -1,0 +1,8 @@
+java Compiler -debug scan:semantic -target irt -target codegen -o Salida.txt Archivo.txt
+java Compiler -debug scan:semantic:parser -target irt -o Salida2.txt -opt algebraic Salida.txt
+java Compiler -debug scan:hola:parser -target hi -o Salida2.txt -opt algebraic Salida.txt
+java Compiler -debug scan:hola:parser -target hi -o Salida3.txt -opt algebraic SalidaASDAS.txt
+java Compiler -debug scan:parse:semantic:irt:codegen -target codegen -o Salida3.txt -opt algebraic Salida.txt
+java Compiler -debug scan -target scan -o Salida4.txt Salida.txt
+java Compiler -debug scan:parse -target parse -o Salida4.txt Salida.txt
+java Compiler -debug scan:parse -target asd -o Salida4.txt hola.txt
