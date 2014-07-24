@@ -28,13 +28,18 @@ public class Compiler{
 			boolean semantic=false;
 			boolean codegen=false;
 				
-			if (args.length==0){
+			if (args.length==0 ||((args.length==1) && (args[args.length-1].equals("-h")))){
 				Ayuda(); 
 				System.exit(0);
 			}else{
 				
 				Hashtable Menu = new Hashtable(); //Hash table que se utilizara para el manejo de todas las opciones
 				
+				if (!(args[args.length-1].endsWith(".decaf"))){
+					ErrorHandler manejoError7 = new ErrorHandler();
+					manejoError7.ErrorPrint(ErrorOutput, "La extensión del archivo de entrada no es válida");
+					System.exit(0);
+				}
 				Menu.put("input", args[args.length-1]);//mAlmacenamos archivo de entrada en hash table
 				
 				for(int k=0;k<(args.length);k++){
@@ -61,6 +66,7 @@ public class Compiler{
 				
 				if (!(Menu.containsKey("-o"))){ //Si no hay un archivo de salida se debe llamar igual al de entrada
 					Menu.put("-o", args[args.length-1]);
+					Menu.put("-o",((String)Menu.get("-o")).replaceAll(".decaf", ".s"));
 				}
 				
 				File Input = new File(((String)Menu.get("input")));
