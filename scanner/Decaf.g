@@ -64,3 +64,8 @@ SLL		:'>>';
 SRL		:'<<';
 IF		: 'if';
 INT		: 'int' ;
+RETURN		: 'return';
+VOID		: 'void';
+SINGLECHAR 	: '\''('\\'('!'..'~')|('!'..'~')|' '|)'\''; 
+STRING		: '"' (('!'..'~')|'\t'|' ')+  '"' ;
+IDENTIFIER	:  ('a'..'z'|'A'..'Z'|'_'|DIGIT)+;
