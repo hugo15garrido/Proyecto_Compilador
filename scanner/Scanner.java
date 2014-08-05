@@ -15,17 +15,20 @@ File file;
 		this.file=name;		
 	}      
 
-	public void Scan (PrintStream out, boolean deb)throws Exception{ /* imprimiendo en pantalla "stage: scanning". */   
+	public void Scan (PrintStream out, boolean deb, boolean print) throws Exception{ /* imprimiendo en pantalla "stage: scanning". */   
+			if (print == true){
 			out.println("Stage: scanning");
-			if(deb==true){
-				Debug debug = new Debug();
-				debug.DebugPrint("scanning");
+
+
+
 			}
-			Metodo(this.file, out, deb);
+			Metodo(this.file, out, deb, print);
+
 	 }
-	 	 	public void Metodo(File file, PrintStream salida, boolean deb)throws Exception{
+	 	public void Metodo(File file, PrintStream salida, boolean deb, boolean prints)throws Exception{
 			ErrorHandler e = new ErrorHandler();
 			CharStream input = new ANTLRFileStream(file.getName());
+			//System.out.println(file.getName());
 			Decaf ds = new Decaf(input);
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("scanner/Decaf.tokens")));
 			tokenTable = new Hashtable<Integer,String>(100);
@@ -36,6 +39,28 @@ File file;
 			}
 			br.close();
 				
+		Token t;
+		while ((t = ds.nextToken()).getType() != Token.EOF){
+				String s1 = new String(tokenTable.get(new Integer(t.getType())));
+				String out=new String(s1);
+				
+				String s2 = new String("@"+String.valueOf(t.getLine())+':'+String.valueOf(t.getCharPositionInLine()));
+				out = out.concat(s2);
+				
+				String s3 = new String(t.getText());
+				out = out.concat(s3);
+				if (prints == true){
+				salida.println(out);
+				}
+			if(deb==true){
+				Debug debug = new Debug();
+				debug.DebugPrint(out);
+			}
+		}
+	}
+	public String getFileName(){  /* imprimiendo en pantalla "stage: scanning" */
+		String s = this.file.getName();
+		return s;
 	}
 	public String toString(){  /* imprimiendo en pantalla "stage: scanning" */
 		String s= " stage: scanning...";

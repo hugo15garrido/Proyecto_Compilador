@@ -27,6 +27,7 @@ public class Compiler{
 			boolean parse=false;
 			boolean semantic=false;
 			boolean codegen=false;
+			boolean printscan=false;
 				
 			if (args.length==0 ||((args.length==1) && (args[args.length-1].equals("-h")))){
 				Ayuda(); 
@@ -68,6 +69,9 @@ public class Compiler{
 					Menu.put("-o", args[args.length-1]);
 					Menu.put("-o",((String)Menu.get("-o")).replaceAll(".decaf", ".s"));
 				}
+				if (!(Menu.containsKey("-target"))){
+					Menu.put("-target", "parse");  //insertamos 2 para que el target que tome sea el parser si no viene nada
+				}
 				
 				File Input = new File(((String)Menu.get("input")));
 				FileInputStream Program = new FileInputStream(Input);
@@ -96,22 +100,23 @@ public class Compiler{
 				String target = (String)Menu.get("-target");
 					if(target.equals ("scan")){
 						Scanner scannner= new Scanner (Input);
-						scannner.Scan(CodigoOut,scan);
+						printscan = true;
+						scannner.Scan(CodigoOut,scan,printscan);
 					 }else if(target.equals ("parse")){
 								Scanner scannner= new Scanner (Input);//hace una instancia de la clase
-								scannner.Scan(CodigoOut,scan);//manda a llamar al metodo que imprime
+								scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 								CC4Parser cc4parser= new CC4Parser(scannner);
 								cc4parser.Parse(CodigoOut,parse);
 							}else if (target.equals ("ast")){
 										Scanner scannner= new Scanner (Input);//hace una instancia de la clase
-										scannner.Scan(CodigoOut,scan);//manda a llamar al metodo que imprime
+										scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 										CC4Parser cc4parser= new CC4Parser(scannner);
 										cc4parser.Parse(CodigoOut,parse);
 										Ast ast1=new Ast(cc4parser);
 										ast1.AsPrint(CodigoOut,ast);
 									}else if (target.equals ("semantic")){
 											Scanner scannner= new Scanner (Input);//hace una instancia de la clase
-											scannner.Scan(CodigoOut,scan);//manda a llamar al metodo que imprime
+											scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 											CC4Parser cc4parser= new CC4Parser(scannner);
 											cc4parser.Parse(CodigoOut,parse);
 											Ast ast1=new Ast(cc4parser);
@@ -120,7 +125,7 @@ public class Compiler{
 											semantic1.Semant(CodigoOut,semantic);
 										}else if (target.equals ("irt")){
 												Scanner scannner= new Scanner (Input);//hace una instancia de la clase
-												scannner.Scan(CodigoOut,scan);//manda a llamar al metodo que imprime
+												scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 												CC4Parser cc4parser= new CC4Parser(scannner);
 												cc4parser.Parse(CodigoOut,parse);
 												Ast ast1=new Ast(cc4parser);
@@ -131,7 +136,7 @@ public class Compiler{
 												irt1.IrPrint(CodigoOut,irt);
 											}else if (target.equals ("codegen")){
 													Scanner scannner= new Scanner (Input);//hace una instancia de la clase
-													scannner.Scan(CodigoOut,scan);//manda a llamar al metodo que imprime
+													scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 													CC4Parser cc4parser= new CC4Parser(scannner);
 													cc4parser.Parse(CodigoOut,parse);
 													Ast ast1=new Ast(cc4parser);
