@@ -1,6 +1,7 @@
 // Generated from DecafParse.g by ANTLR 4.0
 package compiler.parser;
 	import compiler.lib.*;
+	import java.util.Stack;
 
 
 import org.antlr.v4.runtime.tree.*;
@@ -13,8 +14,6 @@ public class DecafParseBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
 	@Override public T visitExpr2(DecafParse.Expr2Context ctx) { return visitChildren(ctx); }
 
 	@Override public T visitBlock(DecafParse.BlockContext ctx) { return visitChildren(ctx); }
-
-	@Override public T visitExpresionMetodo(DecafParse.ExpresionMetodoContext ctx) { return visitChildren(ctx); }
 
 	@Override public T visitExpr(DecafParse.ExprContext ctx) { return visitChildren(ctx); }
 
@@ -31,6 +30,8 @@ public class DecafParseBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
 	@Override public T visitMethod_call(DecafParse.Method_callContext ctx) { return visitChildren(ctx); }
 
 	@Override public T visitOp_rel(DecafParse.Op_relContext ctx) { return visitChildren(ctx); }
+
+	@Override public T visitExpresion_met(DecafParse.Expresion_metContext ctx) { return visitChildren(ctx); }
 
 	@Override public T visitOp_shift(DecafParse.Op_shiftContext ctx) { return visitChildren(ctx); }
 

@@ -1,6 +1,7 @@
 // Generated from DecafParse.g by ANTLR 4.0
 package compiler.parser;
 	import compiler.lib.*;
+	import java.util.Stack;
 
 
 import org.antlr.v4.runtime.tree.*;
@@ -12,8 +13,6 @@ public interface DecafParseVisitor<T> extends ParseTreeVisitor<T> {
 	T visitExpr2(DecafParse.Expr2Context ctx);
 
 	T visitBlock(DecafParse.BlockContext ctx);
-
-	T visitExpresionMetodo(DecafParse.ExpresionMetodoContext ctx);
 
 	T visitExpr(DecafParse.ExprContext ctx);
 
@@ -30,6 +29,8 @@ public interface DecafParseVisitor<T> extends ParseTreeVisitor<T> {
 	T visitMethod_call(DecafParse.Method_callContext ctx);
 
 	T visitOp_rel(DecafParse.Op_relContext ctx);
+
+	T visitExpresion_met(DecafParse.Expresion_metContext ctx);
 
 	T visitOp_shift(DecafParse.Op_shiftContext ctx);
 

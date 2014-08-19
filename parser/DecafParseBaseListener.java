@@ -1,6 +1,7 @@
 // Generated from DecafParse.g by ANTLR 4.0
 package compiler.parser;
 	import compiler.lib.*;
+	import java.util.Stack;
 
 
 
@@ -18,9 +19,6 @@ public class DecafParseBaseListener implements DecafParseListener {
 
 	@Override public void enterBlock(DecafParse.BlockContext ctx) { }
 	@Override public void exitBlock(DecafParse.BlockContext ctx) { }
-
-	@Override public void enterExpresionMetodo(DecafParse.ExpresionMetodoContext ctx) { }
-	@Override public void exitExpresionMetodo(DecafParse.ExpresionMetodoContext ctx) { }
 
 	@Override public void enterExpr(DecafParse.ExprContext ctx) { }
 	@Override public void exitExpr(DecafParse.ExprContext ctx) { }
@@ -45,6 +43,9 @@ public class DecafParseBaseListener implements DecafParseListener {
 
 	@Override public void enterOp_rel(DecafParse.Op_relContext ctx) { }
 	@Override public void exitOp_rel(DecafParse.Op_relContext ctx) { }
+
+	@Override public void enterExpresion_met(DecafParse.Expresion_metContext ctx) { }
+	@Override public void exitExpresion_met(DecafParse.Expresion_metContext ctx) { }
 
 	@Override public void enterOp_shift(DecafParse.Op_shiftContext ctx) { }
 	@Override public void exitOp_shift(DecafParse.Op_shiftContext ctx) { }

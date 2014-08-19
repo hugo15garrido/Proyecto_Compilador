@@ -1,6 +1,7 @@
 // Generated from DecafParse.g by ANTLR 4.0
 package compiler.parser;
 	import compiler.lib.*;
+	import java.util.Stack;
 
 
 import org.antlr.v4.runtime.tree.*;
@@ -15,9 +16,6 @@ public interface DecafParseListener extends ParseTreeListener {
 
 	void enterBlock(DecafParse.BlockContext ctx);
 	void exitBlock(DecafParse.BlockContext ctx);
-
-	void enterExpresionMetodo(DecafParse.ExpresionMetodoContext ctx);
-	void exitExpresionMetodo(DecafParse.ExpresionMetodoContext ctx);
 
 	void enterExpr(DecafParse.ExprContext ctx);
 	void exitExpr(DecafParse.ExprContext ctx);
@@ -42,6 +40,9 @@ public interface DecafParseListener extends ParseTreeListener {
 
 	void enterOp_rel(DecafParse.Op_relContext ctx);
 	void exitOp_rel(DecafParse.Op_relContext ctx);
+
+	void enterExpresion_met(DecafParse.Expresion_metContext ctx);
+	void exitExpresion_met(DecafParse.Expresion_metContext ctx);
 
 	void enterOp_shift(DecafParse.Op_shiftContext ctx);
 	void exitOp_shift(DecafParse.Op_shiftContext ctx);
