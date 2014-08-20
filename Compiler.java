@@ -28,6 +28,7 @@ public class Compiler{
 			boolean semantic=false;
 			boolean codegen=false;
 			boolean printscan=false;
+			boolean printparse=false;
 				
 			if (args.length==0 ||((args.length==1) && (args[args.length-1].equals("-h")))){
 				Ayuda(); 
@@ -106,19 +107,19 @@ public class Compiler{
 								Scanner scannner= new Scanner (Input);//hace una instancia de la clase
 								scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 								CC4Parser cc4parser= new CC4Parser(scannner);
-								cc4parser.Parse(CodigoOut,parse);
+								cc4parser.Parse(CodigoOut,parse,printparse);
 							}else if (target.equals ("ast")){
 										Scanner scannner= new Scanner (Input);//hace una instancia de la clase
 										scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 										CC4Parser cc4parser= new CC4Parser(scannner);
-										cc4parser.Parse(CodigoOut,parse);
+										cc4parser.Parse(CodigoOut,parse,printparse);
 										Ast ast1=new Ast(cc4parser);
 										ast1.AsPrint(CodigoOut,ast);
 									}else if (target.equals ("semantic")){
 											Scanner scannner= new Scanner (Input);//hace una instancia de la clase
 											scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 											CC4Parser cc4parser= new CC4Parser(scannner);
-											cc4parser.Parse(CodigoOut,parse);
+											cc4parser.Parse(CodigoOut,parse,printparse);
 											Ast ast1=new Ast(cc4parser);
 											ast1.AsPrint(CodigoOut,ast);
 											Semantic semantic1= new Semantic(ast1);
@@ -127,7 +128,7 @@ public class Compiler{
 												Scanner scannner= new Scanner (Input);//hace una instancia de la clase
 												scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 												CC4Parser cc4parser= new CC4Parser(scannner);
-												cc4parser.Parse(CodigoOut,parse);
+												cc4parser.Parse(CodigoOut,parse,printparse);
 												Ast ast1=new Ast(cc4parser);
 												ast1.AsPrint(CodigoOut,ast);
 												Semantic semantic1= new Semantic(ast1);
@@ -138,7 +139,7 @@ public class Compiler{
 													Scanner scannner= new Scanner (Input);//hace una instancia de la clase
 													scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 													CC4Parser cc4parser= new CC4Parser(scannner);
-													cc4parser.Parse(CodigoOut,parse);
+													cc4parser.Parse(CodigoOut,parse,printparse);
 													Ast ast1=new Ast(cc4parser);
 													ast1.AsPrint(CodigoOut,ast);
 													Semantic semantic1= new Semantic(ast1);
