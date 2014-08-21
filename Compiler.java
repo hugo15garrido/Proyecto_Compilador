@@ -107,6 +107,7 @@ public class Compiler{
 								Scanner scannner= new Scanner (Input);//hace una instancia de la clase
 								scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 								CC4Parser cc4parser= new CC4Parser(scannner);
+								printparse = true;
 								cc4parser.Parse(CodigoOut,parse,printparse);
 							}else if (target.equals ("ast")){
 										Scanner scannner= new Scanner (Input);//hace una instancia de la clase

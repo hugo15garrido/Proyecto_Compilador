@@ -1,11 +1,11 @@
-Stage: scanning
-'class'@1:0class
-'Program'@1:6Program
-'{'@1:14{
-'void'@2:2void
-IDENTIFIER@2:7main
-'('@2:11(
-')'@2:12)
-'{'@2:14{
-'}'@3:2}
-'}'@4:0}
+Stage: parsing
+
+program:  CLASS PROGRAM LBRACE (field_decl)*  	(method_decl)* RBRACE
+
+metodo2 id OPENPAREN method_param? CLOSEDPAREN block
+
+block		: OPENBRACE var_decl* statement* CLOSEDBRACE var_decl* statement*
+
+id		: IDENTIFIER
+
+metodo2: VOID;
