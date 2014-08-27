@@ -8,114 +8,195 @@ import org.antlr.v4.runtime.tree.*;
 import org.antlr.v4.runtime.Token;
 
 public interface DecafParseListener extends ParseTreeListener {
-	void enterLocation(DecafParse.LocationContext ctx);
-	void exitLocation(DecafParse.LocationContext ctx);
+	void enterBreakSemi(DecafParse.BreakSemiContext ctx);
+	void exitBreakSemi(DecafParse.BreakSemiContext ctx);
 
-	void enterExpr2(DecafParse.Expr2Context ctx);
-	void exitExpr2(DecafParse.Expr2Context ctx);
+	void enterBlockExpr(DecafParse.BlockExprContext ctx);
+	void exitBlockExpr(DecafParse.BlockExprContext ctx);
 
-	void enterBlock(DecafParse.BlockContext ctx);
-	void exitBlock(DecafParse.BlockContext ctx);
+	void enterRoot(DecafParse.RootContext ctx);
+	void exitRoot(DecafParse.RootContext ctx);
 
-	void enterExpr(DecafParse.ExprContext ctx);
-	void exitExpr(DecafParse.ExprContext ctx);
+	void enterIntType(DecafParse.IntTypeContext ctx);
+	void exitIntType(DecafParse.IntTypeContext ctx);
 
-	void enterType(DecafParse.TypeContext ctx);
-	void exitType(DecafParse.TypeContext ctx);
+	void enterLocationOp(DecafParse.LocationOpContext ctx);
+	void exitLocationOp(DecafParse.LocationOpContext ctx);
 
-	void enterId(DecafParse.IdContext ctx);
-	void exitId(DecafParse.IdContext ctx);
+	void enterAsignationColon(DecafParse.AsignationColonContext ctx);
+	void exitAsignationColon(DecafParse.AsignationColonContext ctx);
 
-	void enterField2(DecafParse.Field2Context ctx);
-	void exitField2(DecafParse.Field2Context ctx);
+	void enterOpAnd(DecafParse.OpAndContext ctx);
+	void exitOpAnd(DecafParse.OpAndContext ctx);
 
-	void enterOperador_suma(DecafParse.Operador_sumaContext ctx);
-	void exitOperador_suma(DecafParse.Operador_sumaContext ctx);
+	void enterStatement2(DecafParse.Statement2Context ctx);
+	void exitStatement2(DecafParse.Statement2Context ctx);
 
-	void enterCallout_arg(DecafParse.Callout_argContext ctx);
-	void exitCallout_arg(DecafParse.Callout_argContext ctx);
+	void enterStatement1(DecafParse.Statement1Context ctx);
+	void exitStatement1(DecafParse.Statement1Context ctx);
 
-	void enterMethod_call(DecafParse.Method_callContext ctx);
-	void exitMethod_call(DecafParse.Method_callContext ctx);
+	void enterMethodDecl(DecafParse.MethodDeclContext ctx);
+	void exitMethodDecl(DecafParse.MethodDeclContext ctx);
 
-	void enterOp_rel(DecafParse.Op_relContext ctx);
-	void exitOp_rel(DecafParse.Op_relContext ctx);
+	void enterIdentifier(DecafParse.IdentifierContext ctx);
+	void exitIdentifier(DecafParse.IdentifierContext ctx);
 
-	void enterExpresion_met(DecafParse.Expresion_metContext ctx);
-	void exitExpresion_met(DecafParse.Expresion_metContext ctx);
+	void enterLiteralBoolean(DecafParse.LiteralBooleanContext ctx);
+	void exitLiteralBoolean(DecafParse.LiteralBooleanContext ctx);
 
-	void enterOp_shift(DecafParse.Op_shiftContext ctx);
-	void exitOp_shift(DecafParse.Op_shiftContext ctx);
+	void enterIntLiteralHex(DecafParse.IntLiteralHexContext ctx);
+	void exitIntLiteralHex(DecafParse.IntLiteralHexContext ctx);
 
-	void enterOperador_division(DecafParse.Operador_divisionContext ctx);
-	void exitOperador_division(DecafParse.Operador_divisionContext ctx);
+	void enterAssignOp1(DecafParse.AssignOp1Context ctx);
+	void exitAssignOp1(DecafParse.AssignOp1Context ctx);
 
-	void enterMethod_param(DecafParse.Method_paramContext ctx);
-	void exitMethod_param(DecafParse.Method_paramContext ctx);
+	void enterOpMinus(DecafParse.OpMinusContext ctx);
+	void exitOpMinus(DecafParse.OpMinusContext ctx);
 
-	void enterMinus(DecafParse.MinusContext ctx);
-	void exitMinus(DecafParse.MinusContext ctx);
+	void enterAssignOp2(DecafParse.AssignOp2Context ctx);
+	void exitAssignOp2(DecafParse.AssignOp2Context ctx);
 
-	void enterOp_muldiv(DecafParse.Op_muldivContext ctx);
-	void exitOp_muldiv(DecafParse.Op_muldivContext ctx);
+	void enterFielddecl1(DecafParse.Fielddecl1Context ctx);
+	void exitFielddecl1(DecafParse.Fielddecl1Context ctx);
 
-	void enterInt_literal(DecafParse.Int_literalContext ctx);
-	void exitInt_literal(DecafParse.Int_literalContext ctx);
+	void enterMethodParameter(DecafParse.MethodParameterContext ctx);
+	void exitMethodParameter(DecafParse.MethodParameterContext ctx);
 
-	void enterMethod_name(DecafParse.Method_nameContext ctx);
-	void exitMethod_name(DecafParse.Method_nameContext ctx);
+	void enterFielddecl2(DecafParse.Fielddecl2Context ctx);
+	void exitFielddecl2(DecafParse.Fielddecl2Context ctx);
 
-	void enterVar_decl(DecafParse.Var_declContext ctx);
-	void exitVar_decl(DecafParse.Var_declContext ctx);
+	void enterLiteralChar(DecafParse.LiteralCharContext ctx);
+	void exitLiteralChar(DecafParse.LiteralCharContext ctx);
 
-	void enterOperador_rel(DecafParse.Operador_relContext ctx);
-	void exitOperador_rel(DecafParse.Operador_relContext ctx);
+	void enterVardeclaration(DecafParse.VardeclarationContext ctx);
+	void exitVardeclaration(DecafParse.VardeclarationContext ctx);
 
-	void enterNot(DecafParse.NotContext ctx);
-	void exitNot(DecafParse.NotContext ctx);
+	void enterLiteralExpr2(DecafParse.LiteralExpr2Context ctx);
+	void exitLiteralExpr2(DecafParse.LiteralExpr2Context ctx);
 
-	void enterStatement(DecafParse.StatementContext ctx);
-	void exitStatement(DecafParse.StatementContext ctx);
+	void enterLiteralInt(DecafParse.LiteralIntContext ctx);
+	void exitLiteralInt(DecafParse.LiteralIntContext ctx);
 
-	void enterOp_and(DecafParse.Op_andContext ctx);
-	void exitOp_and(DecafParse.Op_andContext ctx);
+	void enterOpDivision(DecafParse.OpDivisionContext ctx);
+	void exitOpDivision(DecafParse.OpDivisionContext ctx);
 
-	void enterOperador_shifft(DecafParse.Operador_shifftContext ctx);
-	void exitOperador_shifft(DecafParse.Operador_shifftContext ctx);
+	void enterForAssignation(DecafParse.ForAssignationContext ctx);
+	void exitForAssignation(DecafParse.ForAssignationContext ctx);
 
-	void enterProgram(DecafParse.ProgramContext ctx);
-	void exitProgram(DecafParse.ProgramContext ctx);
+	void enterBooleannType(DecafParse.BooleannTypeContext ctx);
+	void exitBooleannType(DecafParse.BooleannTypeContext ctx);
 
-	void enterElseop(DecafParse.ElseopContext ctx);
-	void exitElseop(DecafParse.ElseopContext ctx);
+	void enterStatement111(DecafParse.Statement111Context ctx);
+	void exitStatement111(DecafParse.Statement111Context ctx);
 
-	void enterEq_op(DecafParse.Eq_opContext ctx);
-	void exitEq_op(DecafParse.Eq_opContext ctx);
+	void enterOpEqual(DecafParse.OpEqualContext ctx);
+	void exitOpEqual(DecafParse.OpEqualContext ctx);
 
-	void enterField_decl(DecafParse.Field_declContext ctx);
-	void exitField_decl(DecafParse.Field_declContext ctx);
+	void enterExprAst2(DecafParse.ExprAst2Context ctx);
+	void exitExprAst2(DecafParse.ExprAst2Context ctx);
 
-	void enterOp_or(DecafParse.Op_orContext ctx);
-	void exitOp_or(DecafParse.Op_orContext ctx);
+	void enterBlockStatement(DecafParse.BlockStatementContext ctx);
+	void exitBlockStatement(DecafParse.BlockStatementContext ctx);
 
-	void enterString_literal(DecafParse.String_literalContext ctx);
-	void exitString_literal(DecafParse.String_literalContext ctx);
+	void enterMethodDeclVoid(DecafParse.MethodDeclVoidContext ctx);
+	void exitMethodDeclVoid(DecafParse.MethodDeclVoidContext ctx);
 
-	void enterOp_msm(DecafParse.Op_msmContext ctx);
-	void exitOp_msm(DecafParse.Op_msmContext ctx);
+	void enterOperadorel(DecafParse.OperadorelContext ctx);
+	void exitOperadorel(DecafParse.OperadorelContext ctx);
 
-	void enterMetodo2(DecafParse.Metodo2Context ctx);
-	void exitMetodo2(DecafParse.Metodo2Context ctx);
+	void enterLocation1(DecafParse.Location1Context ctx);
+	void exitLocation1(DecafParse.Location1Context ctx);
 
-	void enterOperador_eq(DecafParse.Operador_eqContext ctx);
-	void exitOperador_eq(DecafParse.Operador_eqContext ctx);
+	void enterLiteralString(DecafParse.LiteralStringContext ctx);
+	void exitLiteralString(DecafParse.LiteralStringContext ctx);
 
-	void enterLiteral(DecafParse.LiteralContext ctx);
-	void exitLiteral(DecafParse.LiteralContext ctx);
+	void enterExpreParen(DecafParse.ExpreParenContext ctx);
+	void exitExpreParen(DecafParse.ExpreParenContext ctx);
 
-	void enterAssign_op(DecafParse.Assign_opContext ctx);
-	void exitAssign_op(DecafParse.Assign_opContext ctx);
+	void enterOperadoreq(DecafParse.OperadoreqContext ctx);
+	void exitOperadoreq(DecafParse.OperadoreqContext ctx);
 
-	void enterMethod_decl(DecafParse.Method_declContext ctx);
-	void exitMethod_decl(DecafParse.Method_declContext ctx);
+	void enterOpShifft1(DecafParse.OpShifft1Context ctx);
+	void exitOpShifft1(DecafParse.OpShifft1Context ctx);
+
+	void enterOpMuldDiv(DecafParse.OpMuldDivContext ctx);
+	void exitOpMuldDiv(DecafParse.OpMuldDivContext ctx);
+
+	void enterCalloutArg2(DecafParse.CalloutArg2Context ctx);
+	void exitCalloutArg2(DecafParse.CalloutArg2Context ctx);
+
+	void enterExpresionMetodo(DecafParse.ExpresionMetodoContext ctx);
+	void exitExpresionMetodo(DecafParse.ExpresionMetodoContext ctx);
+
+	void enterMethodCall(DecafParse.MethodCallContext ctx);
+	void exitMethodCall(DecafParse.MethodCallContext ctx);
+
+	void enterOperadorSuma(DecafParse.OperadorSumaContext ctx);
+	void exitOperadorSuma(DecafParse.OperadorSumaContext ctx);
+
+	void enterCalloutArg1(DecafParse.CalloutArg1Context ctx);
+	void exitCalloutArg1(DecafParse.CalloutArg1Context ctx);
+
+	void enterOperadorShifft(DecafParse.OperadorShifftContext ctx);
+	void exitOperadorShifft(DecafParse.OperadorShifftContext ctx);
+
+	void enterMethodName(DecafParse.MethodNameContext ctx);
+	void exitMethodName(DecafParse.MethodNameContext ctx);
+
+	void enterExpr3(DecafParse.Expr3Context ctx);
+	void exitExpr3(DecafParse.Expr3Context ctx);
+
+	void enterContinueSemi(DecafParse.ContinueSemiContext ctx);
+	void exitContinueSemi(DecafParse.ContinueSemiContext ctx);
+
+	void enterExpr1(DecafParse.Expr1Context ctx);
+	void exitExpr1(DecafParse.Expr1Context ctx);
+
+	void enterCallMethod(DecafParse.CallMethodContext ctx);
+	void exitCallMethod(DecafParse.CallMethodContext ctx);
+
+	void enterMethodCall1(DecafParse.MethodCall1Context ctx);
+	void exitMethodCall1(DecafParse.MethodCall1Context ctx);
+
+	void enterMethodCall2(DecafParse.MethodCall2Context ctx);
+	void exitMethodCall2(DecafParse.MethodCall2Context ctx);
+
+	void enterIntLiteralNumber(DecafParse.IntLiteralNumberContext ctx);
+	void exitIntLiteralNumber(DecafParse.IntLiteralNumberContext ctx);
+
+	void enterRoot2(DecafParse.Root2Context ctx);
+	void exitRoot2(DecafParse.Root2Context ctx);
+
+	void enterMethodDeclType(DecafParse.MethodDeclTypeContext ctx);
+	void exitMethodDeclType(DecafParse.MethodDeclTypeContext ctx);
+
+	void enterOpShifft(DecafParse.OpShifftContext ctx);
+	void exitOpShifft(DecafParse.OpShifftContext ctx);
+
+	void enterOpMsm(DecafParse.OpMsmContext ctx);
+	void exitOpMsm(DecafParse.OpMsmContext ctx);
+
+	void enterFielddecl(DecafParse.FielddeclContext ctx);
+	void exitFielddecl(DecafParse.FielddeclContext ctx);
+
+	void enterMethodDecl2(DecafParse.MethodDecl2Context ctx);
+	void exitMethodDecl2(DecafParse.MethodDecl2Context ctx);
+
+	void enterOpOr(DecafParse.OpOrContext ctx);
+	void exitOpOr(DecafParse.OpOrContext ctx);
+
+	void enterBlockdefinition(DecafParse.BlockdefinitionContext ctx);
+	void exitBlockdefinition(DecafParse.BlockdefinitionContext ctx);
+
+	void enterOpNot(DecafParse.OpNotContext ctx);
+	void exitOpNot(DecafParse.OpNotContext ctx);
+
+	void enterRoot1(DecafParse.Root1Context ctx);
+	void exitRoot1(DecafParse.Root1Context ctx);
+
+	void enterMethodParameter1(DecafParse.MethodParameter1Context ctx);
+	void exitMethodParameter1(DecafParse.MethodParameter1Context ctx);
+
+	void enterVardeclaration1(DecafParse.Vardeclaration1Context ctx);
+	void exitVardeclaration1(DecafParse.Vardeclaration1Context ctx);
 }

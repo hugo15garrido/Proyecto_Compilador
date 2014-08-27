@@ -8,77 +8,129 @@ import org.antlr.v4.runtime.tree.*;
 import org.antlr.v4.runtime.Token;
 
 public interface DecafParseVisitor<T> extends ParseTreeVisitor<T> {
-	T visitLocation(DecafParse.LocationContext ctx);
+	T visitBreakSemi(DecafParse.BreakSemiContext ctx);
 
-	T visitExpr2(DecafParse.Expr2Context ctx);
+	T visitBlockExpr(DecafParse.BlockExprContext ctx);
 
-	T visitBlock(DecafParse.BlockContext ctx);
+	T visitRoot(DecafParse.RootContext ctx);
 
-	T visitExpr(DecafParse.ExprContext ctx);
+	T visitIntType(DecafParse.IntTypeContext ctx);
 
-	T visitType(DecafParse.TypeContext ctx);
+	T visitLocationOp(DecafParse.LocationOpContext ctx);
 
-	T visitId(DecafParse.IdContext ctx);
+	T visitAsignationColon(DecafParse.AsignationColonContext ctx);
 
-	T visitField2(DecafParse.Field2Context ctx);
+	T visitOpAnd(DecafParse.OpAndContext ctx);
 
-	T visitOperador_suma(DecafParse.Operador_sumaContext ctx);
+	T visitStatement2(DecafParse.Statement2Context ctx);
 
-	T visitCallout_arg(DecafParse.Callout_argContext ctx);
+	T visitStatement1(DecafParse.Statement1Context ctx);
 
-	T visitMethod_call(DecafParse.Method_callContext ctx);
+	T visitMethodDecl(DecafParse.MethodDeclContext ctx);
 
-	T visitOp_rel(DecafParse.Op_relContext ctx);
+	T visitIdentifier(DecafParse.IdentifierContext ctx);
 
-	T visitExpresion_met(DecafParse.Expresion_metContext ctx);
+	T visitLiteralBoolean(DecafParse.LiteralBooleanContext ctx);
 
-	T visitOp_shift(DecafParse.Op_shiftContext ctx);
+	T visitIntLiteralHex(DecafParse.IntLiteralHexContext ctx);
 
-	T visitOperador_division(DecafParse.Operador_divisionContext ctx);
+	T visitAssignOp1(DecafParse.AssignOp1Context ctx);
 
-	T visitMethod_param(DecafParse.Method_paramContext ctx);
+	T visitOpMinus(DecafParse.OpMinusContext ctx);
 
-	T visitMinus(DecafParse.MinusContext ctx);
+	T visitAssignOp2(DecafParse.AssignOp2Context ctx);
 
-	T visitOp_muldiv(DecafParse.Op_muldivContext ctx);
+	T visitFielddecl1(DecafParse.Fielddecl1Context ctx);
 
-	T visitInt_literal(DecafParse.Int_literalContext ctx);
+	T visitMethodParameter(DecafParse.MethodParameterContext ctx);
 
-	T visitMethod_name(DecafParse.Method_nameContext ctx);
+	T visitFielddecl2(DecafParse.Fielddecl2Context ctx);
 
-	T visitVar_decl(DecafParse.Var_declContext ctx);
+	T visitLiteralChar(DecafParse.LiteralCharContext ctx);
 
-	T visitOperador_rel(DecafParse.Operador_relContext ctx);
+	T visitVardeclaration(DecafParse.VardeclarationContext ctx);
 
-	T visitNot(DecafParse.NotContext ctx);
+	T visitLiteralExpr2(DecafParse.LiteralExpr2Context ctx);
 
-	T visitStatement(DecafParse.StatementContext ctx);
+	T visitLiteralInt(DecafParse.LiteralIntContext ctx);
 
-	T visitOp_and(DecafParse.Op_andContext ctx);
+	T visitOpDivision(DecafParse.OpDivisionContext ctx);
 
-	T visitOperador_shifft(DecafParse.Operador_shifftContext ctx);
+	T visitForAssignation(DecafParse.ForAssignationContext ctx);
 
-	T visitProgram(DecafParse.ProgramContext ctx);
+	T visitBooleannType(DecafParse.BooleannTypeContext ctx);
 
-	T visitElseop(DecafParse.ElseopContext ctx);
+	T visitStatement111(DecafParse.Statement111Context ctx);
 
-	T visitEq_op(DecafParse.Eq_opContext ctx);
+	T visitOpEqual(DecafParse.OpEqualContext ctx);
 
-	T visitField_decl(DecafParse.Field_declContext ctx);
+	T visitExprAst2(DecafParse.ExprAst2Context ctx);
 
-	T visitOp_or(DecafParse.Op_orContext ctx);
+	T visitBlockStatement(DecafParse.BlockStatementContext ctx);
 
-	T visitString_literal(DecafParse.String_literalContext ctx);
+	T visitMethodDeclVoid(DecafParse.MethodDeclVoidContext ctx);
 
-	T visitOp_msm(DecafParse.Op_msmContext ctx);
+	T visitOperadorel(DecafParse.OperadorelContext ctx);
 
-	T visitMetodo2(DecafParse.Metodo2Context ctx);
+	T visitLocation1(DecafParse.Location1Context ctx);
 
-	T visitOperador_eq(DecafParse.Operador_eqContext ctx);
+	T visitLiteralString(DecafParse.LiteralStringContext ctx);
 
-	T visitLiteral(DecafParse.LiteralContext ctx);
+	T visitExpreParen(DecafParse.ExpreParenContext ctx);
 
-	T visitAssign_op(DecafParse.Assign_opContext ctx);
+	T visitOperadoreq(DecafParse.OperadoreqContext ctx);
 
-	T visitMethod_decl(DecafParse.Method_declContext ctx);
+	T visitOpShifft1(DecafParse.OpShifft1Context ctx);
+
+	T visitOpMuldDiv(DecafParse.OpMuldDivContext ctx);
+
+	T visitCalloutArg2(DecafParse.CalloutArg2Context ctx);
+
+	T visitExpresionMetodo(DecafParse.ExpresionMetodoContext ctx);
+
+	T visitMethodCall(DecafParse.MethodCallContext ctx);
+
+	T visitOperadorSuma(DecafParse.OperadorSumaContext ctx);
+
+	T visitCalloutArg1(DecafParse.CalloutArg1Context ctx);
+
+	T visitOperadorShifft(DecafParse.OperadorShifftContext ctx);
+
+	T visitMethodName(DecafParse.MethodNameContext ctx);
+
+	T visitExpr3(DecafParse.Expr3Context ctx);
+
+	T visitContinueSemi(DecafParse.ContinueSemiContext ctx);
+
+	T visitExpr1(DecafParse.Expr1Context ctx);
+
+	T visitCallMethod(DecafParse.CallMethodContext ctx);
+
+	T visitMethodCall1(DecafParse.MethodCall1Context ctx);
+
+	T visitMethodCall2(DecafParse.MethodCall2Context ctx);
+
+	T visitIntLiteralNumber(DecafParse.IntLiteralNumberContext ctx);
+
+	T visitRoot2(DecafParse.Root2Context ctx);
+
+	T visitMethodDeclType(DecafParse.MethodDeclTypeContext ctx);
+
+	T visitOpShifft(DecafParse.OpShifftContext ctx);
+
+	T visitOpMsm(DecafParse.OpMsmContext ctx);
+
+	T visitFielddecl(DecafParse.FielddeclContext ctx);
+
+	T visitOpOr(DecafParse.OpOrContext ctx);
+
+	T visitBlockdefinition(DecafParse.BlockdefinitionContext ctx);
+
+	T visitOpNot(DecafParse.OpNotContext ctx);
+
+	T visitRoot1(DecafParse.Root1Context ctx);
+
+	T visitMethodParameter1(DecafParse.MethodParameter1Context ctx);
+
+	T visitVardeclaration1(DecafParse.Vardeclaration1Context ctx);
 }

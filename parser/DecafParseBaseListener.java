@@ -11,116 +11,197 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 import org.antlr.v4.runtime.tree.ErrorNode;
 
 public class DecafParseBaseListener implements DecafParseListener {
-	@Override public void enterLocation(DecafParse.LocationContext ctx) { }
-	@Override public void exitLocation(DecafParse.LocationContext ctx) { }
+	@Override public void enterBreakSemi(DecafParse.BreakSemiContext ctx) { }
+	@Override public void exitBreakSemi(DecafParse.BreakSemiContext ctx) { }
 
-	@Override public void enterExpr2(DecafParse.Expr2Context ctx) { }
-	@Override public void exitExpr2(DecafParse.Expr2Context ctx) { }
+	@Override public void enterBlockExpr(DecafParse.BlockExprContext ctx) { }
+	@Override public void exitBlockExpr(DecafParse.BlockExprContext ctx) { }
 
-	@Override public void enterBlock(DecafParse.BlockContext ctx) { }
-	@Override public void exitBlock(DecafParse.BlockContext ctx) { }
+	@Override public void enterRoot(DecafParse.RootContext ctx) { }
+	@Override public void exitRoot(DecafParse.RootContext ctx) { }
 
-	@Override public void enterExpr(DecafParse.ExprContext ctx) { }
-	@Override public void exitExpr(DecafParse.ExprContext ctx) { }
+	@Override public void enterIntType(DecafParse.IntTypeContext ctx) { }
+	@Override public void exitIntType(DecafParse.IntTypeContext ctx) { }
 
-	@Override public void enterType(DecafParse.TypeContext ctx) { }
-	@Override public void exitType(DecafParse.TypeContext ctx) { }
+	@Override public void enterLocationOp(DecafParse.LocationOpContext ctx) { }
+	@Override public void exitLocationOp(DecafParse.LocationOpContext ctx) { }
 
-	@Override public void enterId(DecafParse.IdContext ctx) { }
-	@Override public void exitId(DecafParse.IdContext ctx) { }
+	@Override public void enterAsignationColon(DecafParse.AsignationColonContext ctx) { }
+	@Override public void exitAsignationColon(DecafParse.AsignationColonContext ctx) { }
 
-	@Override public void enterField2(DecafParse.Field2Context ctx) { }
-	@Override public void exitField2(DecafParse.Field2Context ctx) { }
+	@Override public void enterOpAnd(DecafParse.OpAndContext ctx) { }
+	@Override public void exitOpAnd(DecafParse.OpAndContext ctx) { }
 
-	@Override public void enterOperador_suma(DecafParse.Operador_sumaContext ctx) { }
-	@Override public void exitOperador_suma(DecafParse.Operador_sumaContext ctx) { }
+	@Override public void enterStatement2(DecafParse.Statement2Context ctx) { }
+	@Override public void exitStatement2(DecafParse.Statement2Context ctx) { }
 
-	@Override public void enterCallout_arg(DecafParse.Callout_argContext ctx) { }
-	@Override public void exitCallout_arg(DecafParse.Callout_argContext ctx) { }
+	@Override public void enterStatement1(DecafParse.Statement1Context ctx) { }
+	@Override public void exitStatement1(DecafParse.Statement1Context ctx) { }
 
-	@Override public void enterMethod_call(DecafParse.Method_callContext ctx) { }
-	@Override public void exitMethod_call(DecafParse.Method_callContext ctx) { }
+	@Override public void enterMethodDecl(DecafParse.MethodDeclContext ctx) { }
+	@Override public void exitMethodDecl(DecafParse.MethodDeclContext ctx) { }
 
-	@Override public void enterOp_rel(DecafParse.Op_relContext ctx) { }
-	@Override public void exitOp_rel(DecafParse.Op_relContext ctx) { }
+	@Override public void enterIdentifier(DecafParse.IdentifierContext ctx) { }
+	@Override public void exitIdentifier(DecafParse.IdentifierContext ctx) { }
 
-	@Override public void enterExpresion_met(DecafParse.Expresion_metContext ctx) { }
-	@Override public void exitExpresion_met(DecafParse.Expresion_metContext ctx) { }
+	@Override public void enterLiteralBoolean(DecafParse.LiteralBooleanContext ctx) { }
+	@Override public void exitLiteralBoolean(DecafParse.LiteralBooleanContext ctx) { }
 
-	@Override public void enterOp_shift(DecafParse.Op_shiftContext ctx) { }
-	@Override public void exitOp_shift(DecafParse.Op_shiftContext ctx) { }
+	@Override public void enterIntLiteralHex(DecafParse.IntLiteralHexContext ctx) { }
+	@Override public void exitIntLiteralHex(DecafParse.IntLiteralHexContext ctx) { }
 
-	@Override public void enterOperador_division(DecafParse.Operador_divisionContext ctx) { }
-	@Override public void exitOperador_division(DecafParse.Operador_divisionContext ctx) { }
+	@Override public void enterAssignOp1(DecafParse.AssignOp1Context ctx) { }
+	@Override public void exitAssignOp1(DecafParse.AssignOp1Context ctx) { }
 
-	@Override public void enterMethod_param(DecafParse.Method_paramContext ctx) { }
-	@Override public void exitMethod_param(DecafParse.Method_paramContext ctx) { }
+	@Override public void enterOpMinus(DecafParse.OpMinusContext ctx) { }
+	@Override public void exitOpMinus(DecafParse.OpMinusContext ctx) { }
 
-	@Override public void enterMinus(DecafParse.MinusContext ctx) { }
-	@Override public void exitMinus(DecafParse.MinusContext ctx) { }
+	@Override public void enterAssignOp2(DecafParse.AssignOp2Context ctx) { }
+	@Override public void exitAssignOp2(DecafParse.AssignOp2Context ctx) { }
 
-	@Override public void enterOp_muldiv(DecafParse.Op_muldivContext ctx) { }
-	@Override public void exitOp_muldiv(DecafParse.Op_muldivContext ctx) { }
+	@Override public void enterFielddecl1(DecafParse.Fielddecl1Context ctx) { }
+	@Override public void exitFielddecl1(DecafParse.Fielddecl1Context ctx) { }
 
-	@Override public void enterInt_literal(DecafParse.Int_literalContext ctx) { }
-	@Override public void exitInt_literal(DecafParse.Int_literalContext ctx) { }
+	@Override public void enterMethodParameter(DecafParse.MethodParameterContext ctx) { }
+	@Override public void exitMethodParameter(DecafParse.MethodParameterContext ctx) { }
 
-	@Override public void enterMethod_name(DecafParse.Method_nameContext ctx) { }
-	@Override public void exitMethod_name(DecafParse.Method_nameContext ctx) { }
+	@Override public void enterFielddecl2(DecafParse.Fielddecl2Context ctx) { }
+	@Override public void exitFielddecl2(DecafParse.Fielddecl2Context ctx) { }
 
-	@Override public void enterVar_decl(DecafParse.Var_declContext ctx) { }
-	@Override public void exitVar_decl(DecafParse.Var_declContext ctx) { }
+	@Override public void enterLiteralChar(DecafParse.LiteralCharContext ctx) { }
+	@Override public void exitLiteralChar(DecafParse.LiteralCharContext ctx) { }
 
-	@Override public void enterOperador_rel(DecafParse.Operador_relContext ctx) { }
-	@Override public void exitOperador_rel(DecafParse.Operador_relContext ctx) { }
+	@Override public void enterVardeclaration(DecafParse.VardeclarationContext ctx) { }
+	@Override public void exitVardeclaration(DecafParse.VardeclarationContext ctx) { }
 
-	@Override public void enterNot(DecafParse.NotContext ctx) { }
-	@Override public void exitNot(DecafParse.NotContext ctx) { }
+	@Override public void enterLiteralExpr2(DecafParse.LiteralExpr2Context ctx) { }
+	@Override public void exitLiteralExpr2(DecafParse.LiteralExpr2Context ctx) { }
 
-	@Override public void enterStatement(DecafParse.StatementContext ctx) { }
-	@Override public void exitStatement(DecafParse.StatementContext ctx) { }
+	@Override public void enterLiteralInt(DecafParse.LiteralIntContext ctx) { }
+	@Override public void exitLiteralInt(DecafParse.LiteralIntContext ctx) { }
 
-	@Override public void enterOp_and(DecafParse.Op_andContext ctx) { }
-	@Override public void exitOp_and(DecafParse.Op_andContext ctx) { }
+	@Override public void enterOpDivision(DecafParse.OpDivisionContext ctx) { }
+	@Override public void exitOpDivision(DecafParse.OpDivisionContext ctx) { }
 
-	@Override public void enterOperador_shifft(DecafParse.Operador_shifftContext ctx) { }
-	@Override public void exitOperador_shifft(DecafParse.Operador_shifftContext ctx) { }
+	@Override public void enterForAssignation(DecafParse.ForAssignationContext ctx) { }
+	@Override public void exitForAssignation(DecafParse.ForAssignationContext ctx) { }
 
-	@Override public void enterProgram(DecafParse.ProgramContext ctx) { }
-	@Override public void exitProgram(DecafParse.ProgramContext ctx) { }
+	@Override public void enterBooleannType(DecafParse.BooleannTypeContext ctx) { }
+	@Override public void exitBooleannType(DecafParse.BooleannTypeContext ctx) { }
 
-	@Override public void enterElseop(DecafParse.ElseopContext ctx) { }
-	@Override public void exitElseop(DecafParse.ElseopContext ctx) { }
+	@Override public void enterStatement111(DecafParse.Statement111Context ctx) { }
+	@Override public void exitStatement111(DecafParse.Statement111Context ctx) { }
 
-	@Override public void enterEq_op(DecafParse.Eq_opContext ctx) { }
-	@Override public void exitEq_op(DecafParse.Eq_opContext ctx) { }
+	@Override public void enterOpEqual(DecafParse.OpEqualContext ctx) { }
+	@Override public void exitOpEqual(DecafParse.OpEqualContext ctx) { }
 
-	@Override public void enterField_decl(DecafParse.Field_declContext ctx) { }
-	@Override public void exitField_decl(DecafParse.Field_declContext ctx) { }
+	@Override public void enterExprAst2(DecafParse.ExprAst2Context ctx) { }
+	@Override public void exitExprAst2(DecafParse.ExprAst2Context ctx) { }
 
-	@Override public void enterOp_or(DecafParse.Op_orContext ctx) { }
-	@Override public void exitOp_or(DecafParse.Op_orContext ctx) { }
+	@Override public void enterBlockStatement(DecafParse.BlockStatementContext ctx) { }
+	@Override public void exitBlockStatement(DecafParse.BlockStatementContext ctx) { }
 
-	@Override public void enterString_literal(DecafParse.String_literalContext ctx) { }
-	@Override public void exitString_literal(DecafParse.String_literalContext ctx) { }
+	@Override public void enterMethodDeclVoid(DecafParse.MethodDeclVoidContext ctx) { }
+	@Override public void exitMethodDeclVoid(DecafParse.MethodDeclVoidContext ctx) { }
 
-	@Override public void enterOp_msm(DecafParse.Op_msmContext ctx) { }
-	@Override public void exitOp_msm(DecafParse.Op_msmContext ctx) { }
+	@Override public void enterOperadorel(DecafParse.OperadorelContext ctx) { }
+	@Override public void exitOperadorel(DecafParse.OperadorelContext ctx) { }
 
-	@Override public void enterMetodo2(DecafParse.Metodo2Context ctx) { }
-	@Override public void exitMetodo2(DecafParse.Metodo2Context ctx) { }
+	@Override public void enterLocation1(DecafParse.Location1Context ctx) { }
+	@Override public void exitLocation1(DecafParse.Location1Context ctx) { }
 
-	@Override public void enterOperador_eq(DecafParse.Operador_eqContext ctx) { }
-	@Override public void exitOperador_eq(DecafParse.Operador_eqContext ctx) { }
+	@Override public void enterLiteralString(DecafParse.LiteralStringContext ctx) { }
+	@Override public void exitLiteralString(DecafParse.LiteralStringContext ctx) { }
 
-	@Override public void enterLiteral(DecafParse.LiteralContext ctx) { }
-	@Override public void exitLiteral(DecafParse.LiteralContext ctx) { }
+	@Override public void enterExpreParen(DecafParse.ExpreParenContext ctx) { }
+	@Override public void exitExpreParen(DecafParse.ExpreParenContext ctx) { }
 
-	@Override public void enterAssign_op(DecafParse.Assign_opContext ctx) { }
-	@Override public void exitAssign_op(DecafParse.Assign_opContext ctx) { }
+	@Override public void enterOperadoreq(DecafParse.OperadoreqContext ctx) { }
+	@Override public void exitOperadoreq(DecafParse.OperadoreqContext ctx) { }
 
-	@Override public void enterMethod_decl(DecafParse.Method_declContext ctx) { }
-	@Override public void exitMethod_decl(DecafParse.Method_declContext ctx) { }
+	@Override public void enterOpShifft1(DecafParse.OpShifft1Context ctx) { }
+	@Override public void exitOpShifft1(DecafParse.OpShifft1Context ctx) { }
+
+	@Override public void enterOpMuldDiv(DecafParse.OpMuldDivContext ctx) { }
+	@Override public void exitOpMuldDiv(DecafParse.OpMuldDivContext ctx) { }
+
+	@Override public void enterCalloutArg2(DecafParse.CalloutArg2Context ctx) { }
+	@Override public void exitCalloutArg2(DecafParse.CalloutArg2Context ctx) { }
+
+	@Override public void enterExpresionMetodo(DecafParse.ExpresionMetodoContext ctx) { }
+	@Override public void exitExpresionMetodo(DecafParse.ExpresionMetodoContext ctx) { }
+
+	@Override public void enterMethodCall(DecafParse.MethodCallContext ctx) { }
+	@Override public void exitMethodCall(DecafParse.MethodCallContext ctx) { }
+
+	@Override public void enterOperadorSuma(DecafParse.OperadorSumaContext ctx) { }
+	@Override public void exitOperadorSuma(DecafParse.OperadorSumaContext ctx) { }
+
+	@Override public void enterCalloutArg1(DecafParse.CalloutArg1Context ctx) { }
+	@Override public void exitCalloutArg1(DecafParse.CalloutArg1Context ctx) { }
+
+	@Override public void enterOperadorShifft(DecafParse.OperadorShifftContext ctx) { }
+	@Override public void exitOperadorShifft(DecafParse.OperadorShifftContext ctx) { }
+
+	@Override public void enterMethodName(DecafParse.MethodNameContext ctx) { }
+	@Override public void exitMethodName(DecafParse.MethodNameContext ctx) { }
+
+	@Override public void enterExpr3(DecafParse.Expr3Context ctx) { }
+	@Override public void exitExpr3(DecafParse.Expr3Context ctx) { }
+
+	@Override public void enterContinueSemi(DecafParse.ContinueSemiContext ctx) { }
+	@Override public void exitContinueSemi(DecafParse.ContinueSemiContext ctx) { }
+
+	@Override public void enterExpr1(DecafParse.Expr1Context ctx) { }
+	@Override public void exitExpr1(DecafParse.Expr1Context ctx) { }
+
+	@Override public void enterCallMethod(DecafParse.CallMethodContext ctx) { }
+	@Override public void exitCallMethod(DecafParse.CallMethodContext ctx) { }
+
+	@Override public void enterMethodCall1(DecafParse.MethodCall1Context ctx) { }
+	@Override public void exitMethodCall1(DecafParse.MethodCall1Context ctx) { }
+
+	@Override public void enterMethodCall2(DecafParse.MethodCall2Context ctx) { }
+	@Override public void exitMethodCall2(DecafParse.MethodCall2Context ctx) { }
+
+	@Override public void enterIntLiteralNumber(DecafParse.IntLiteralNumberContext ctx) { }
+	@Override public void exitIntLiteralNumber(DecafParse.IntLiteralNumberContext ctx) { }
+
+	@Override public void enterRoot2(DecafParse.Root2Context ctx) { }
+	@Override public void exitRoot2(DecafParse.Root2Context ctx) { }
+
+	@Override public void enterMethodDeclType(DecafParse.MethodDeclTypeContext ctx) { }
+	@Override public void exitMethodDeclType(DecafParse.MethodDeclTypeContext ctx) { }
+
+	@Override public void enterOpShifft(DecafParse.OpShifftContext ctx) { }
+	@Override public void exitOpShifft(DecafParse.OpShifftContext ctx) { }
+
+	@Override public void enterOpMsm(DecafParse.OpMsmContext ctx) { }
+	@Override public void exitOpMsm(DecafParse.OpMsmContext ctx) { }
+
+	@Override public void enterFielddecl(DecafParse.FielddeclContext ctx) { }
+	@Override public void exitFielddecl(DecafParse.FielddeclContext ctx) { }
+
+	@Override public void enterMethodDecl2(DecafParse.MethodDecl2Context ctx) { }
+	@Override public void exitMethodDecl2(DecafParse.MethodDecl2Context ctx) { }
+
+	@Override public void enterOpOr(DecafParse.OpOrContext ctx) { }
+	@Override public void exitOpOr(DecafParse.OpOrContext ctx) { }
+
+	@Override public void enterBlockdefinition(DecafParse.BlockdefinitionContext ctx) { }
+	@Override public void exitBlockdefinition(DecafParse.BlockdefinitionContext ctx) { }
+
+	@Override public void enterOpNot(DecafParse.OpNotContext ctx) { }
+	@Override public void exitOpNot(DecafParse.OpNotContext ctx) { }
+
+	@Override public void enterRoot1(DecafParse.Root1Context ctx) { }
+	@Override public void exitRoot1(DecafParse.Root1Context ctx) { }
+
+	@Override public void enterMethodParameter1(DecafParse.MethodParameter1Context ctx) { }
+	@Override public void exitMethodParameter1(DecafParse.MethodParameter1Context ctx) { }
+
+	@Override public void enterVardeclaration1(DecafParse.Vardeclaration1Context ctx) { }
+	@Override public void exitVardeclaration1(DecafParse.Vardeclaration1Context ctx) { }
 
 	@Override public void enterEveryRule(ParserRuleContext ctx) { }
 	@Override public void exitEveryRule(ParserRuleContext ctx) { }
