@@ -18,9 +18,6 @@ File file;
 	public void Scan (PrintStream out, boolean deb, boolean print) throws Exception{ /* imprimiendo en pantalla "stage: scanning". */   
 			if (print == true){
 			out.println("Stage: scanning");
-
-
-
 			}
 			Metodo(this.file, out, deb, print);
 

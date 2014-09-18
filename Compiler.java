@@ -29,6 +29,7 @@ public class Compiler{
 			boolean codegen=false;
 			boolean printscan=false;
 			boolean printparse=false;
+			boolean printast=false;
 				
 			if (args.length==0 ||((args.length==1) && (args[args.length-1].equals("-h")))){
 				Ayuda(); 
@@ -71,7 +72,7 @@ public class Compiler{
 					Menu.put("-o",((String)Menu.get("-o")).replaceAll(".decaf", ".s"));
 				}
 				if (!(Menu.containsKey("-target"))){
-					Menu.put("-target", "parse");  //insertamos 2 para que el target que tome sea el parser si no viene nada
+					Menu.put("-target", "ast");  //insertamos 2 para que el target que tome sea el parser si no viene nada
 				}
 				
 				File Input = new File(((String)Menu.get("input")));
@@ -115,14 +116,15 @@ public class Compiler{
 										CC4Parser cc4parser= new CC4Parser(scannner);
 										cc4parser.Parse(CodigoOut,parse,printparse);
 										Ast ast1=new Ast(cc4parser);
-										ast1.AsPrint(CodigoOut,ast);
+										printast = true;
+										ast1.AsPrint(CodigoOut,ast,printast);
 									}else if (target.equals ("semantic")){
 											Scanner scannner= new Scanner (Input);//hace una instancia de la clase
 											scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
 											CC4Parser cc4parser= new CC4Parser(scannner);
 											cc4parser.Parse(CodigoOut,parse,printparse);
 											Ast ast1=new Ast(cc4parser);
-											ast1.AsPrint(CodigoOut,ast);
+											ast1.AsPrint(CodigoOut,ast,printast);
 											Semantic semantic1= new Semantic(ast1);
 											semantic1.Semant(CodigoOut,semantic);
 										}else if (target.equals ("irt")){
@@ -131,7 +133,7 @@ public class Compiler{
 												CC4Parser cc4parser= new CC4Parser(scannner);
 												cc4parser.Parse(CodigoOut,parse,printparse);
 												Ast ast1=new Ast(cc4parser);
-												ast1.AsPrint(CodigoOut,ast);
+												ast1.AsPrint(CodigoOut,ast,printast);
 												Semantic semantic1= new Semantic(ast1);
 												semantic1.Semant(CodigoOut,semantic);
 												Irt irt1= new Irt (semantic1);
@@ -142,7 +144,7 @@ public class Compiler{
 													CC4Parser cc4parser= new CC4Parser(scannner);
 													cc4parser.Parse(CodigoOut,parse,printparse);
 													Ast ast1=new Ast(cc4parser);
-													ast1.AsPrint(CodigoOut,ast);
+													ast1.AsPrint(CodigoOut,ast,printast);
 													Semantic semantic1= new Semantic(ast1);
 													semantic1.Semant(CodigoOut,semantic);
 													Irt irt1= new Irt (semantic1);

@@ -1,0 +1,14 @@
+class Program {
+  int abs(int a) {
+    boolean b;
+	int factorial;
+	int a;
+	
+	for i=0, a{ 	
+		factorial=factorial*i; 
+	}
+	callout("printf", "%d\n", factorial);
+	return factorial;
+    
+  }
+}

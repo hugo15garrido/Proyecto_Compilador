@@ -182,9 +182,6 @@ public class DecafParseBaseListener implements DecafParseListener {
 	@Override public void enterFielddecl(DecafParse.FielddeclContext ctx) { }
 	@Override public void exitFielddecl(DecafParse.FielddeclContext ctx) { }
 
-	@Override public void enterMethodDecl2(DecafParse.MethodDecl2Context ctx) { }
-	@Override public void exitMethodDecl2(DecafParse.MethodDecl2Context ctx) { }
-
 	@Override public void enterOpOr(DecafParse.OpOrContext ctx) { }
 	@Override public void exitOpOr(DecafParse.OpOrContext ctx) { }
 
@@ -196,9 +193,6 @@ public class DecafParseBaseListener implements DecafParseListener {
 
 	@Override public void enterRoot1(DecafParse.Root1Context ctx) { }
 	@Override public void exitRoot1(DecafParse.Root1Context ctx) { }
-
-	@Override public void enterMethodParameter1(DecafParse.MethodParameter1Context ctx) { }
-	@Override public void exitMethodParameter1(DecafParse.MethodParameter1Context ctx) { }
 
 	@Override public void enterVardeclaration1(DecafParse.Vardeclaration1Context ctx) { }
 	@Override public void exitVardeclaration1(DecafParse.Vardeclaration1Context ctx) { }

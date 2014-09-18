@@ -1,4 +1,4 @@
-// Generated from Decaf.g by ANTLR 4.0
+// Generated from scanner\Decaf.g by ANTLR 4.0
 
 	package compiler.scanner;
 	import compiler.lib.*;

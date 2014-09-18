@@ -130,7 +130,5 @@ public interface DecafParseVisitor<T> extends ParseTreeVisitor<T> {
 
 	T visitRoot1(DecafParse.Root1Context ctx);
 
-	T visitMethodParameter1(DecafParse.MethodParameter1Context ctx);
-
 	T visitVardeclaration1(DecafParse.Vardeclaration1Context ctx);
 }

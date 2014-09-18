@@ -179,9 +179,6 @@ public interface DecafParseListener extends ParseTreeListener {
 	void enterFielddecl(DecafParse.FielddeclContext ctx);
 	void exitFielddecl(DecafParse.FielddeclContext ctx);
 
-	void enterMethodDecl2(DecafParse.MethodDecl2Context ctx);
-	void exitMethodDecl2(DecafParse.MethodDecl2Context ctx);
-
 	void enterOpOr(DecafParse.OpOrContext ctx);
 	void exitOpOr(DecafParse.OpOrContext ctx);
 
@@ -193,9 +190,6 @@ public interface DecafParseListener extends ParseTreeListener {
 
 	void enterRoot1(DecafParse.Root1Context ctx);
 	void exitRoot1(DecafParse.Root1Context ctx);
-
-	void enterMethodParameter1(DecafParse.MethodParameter1Context ctx);
-	void exitMethodParameter1(DecafParse.MethodParameter1Context ctx);
 
 	void enterVardeclaration1(DecafParse.Vardeclaration1Context ctx);
 	void exitVardeclaration1(DecafParse.Vardeclaration1Context ctx);
