@@ -30,6 +30,7 @@ public class Compiler{
 			boolean printscan=false;
 			boolean printparse=false;
 			boolean printast=false;
+			boolean printsemantic=false;
 				
 			if (args.length==0 ||((args.length==1) && (args[args.length-1].equals("-h")))){
 				Ayuda(); 
@@ -72,7 +73,7 @@ public class Compiler{
 					Menu.put("-o",((String)Menu.get("-o")).replaceAll(".decaf", ".s"));
 				}
 				if (!(Menu.containsKey("-target"))){
-					Menu.put("-target", "ast");  //insertamos 2 para que el target que tome sea el parser si no viene nada
+					Menu.put("-target", "semantic");  //insertamos 2 para que el target que tome sea el parser si no viene nada
 				}
 				
 				File Input = new File(((String)Menu.get("input")));
@@ -126,7 +127,8 @@ public class Compiler{
 											Ast ast1=new Ast(cc4parser);
 											ast1.AsPrint(CodigoOut,ast,printast);
 											Semantic semantic1= new Semantic(ast1);
-											semantic1.Semant(CodigoOut,semantic);
+											printsemantic = true;
+											semantic1.Semant(CodigoOut,semantic,printsemantic);
 										}else if (target.equals ("irt")){
 												Scanner scannner= new Scanner (Input);//hace una instancia de la clase
 												scannner.Scan(CodigoOut,scan,printscan);;//manda a llamar al metodo que imprime
@@ -135,7 +137,7 @@ public class Compiler{
 												Ast ast1=new Ast(cc4parser);
 												ast1.AsPrint(CodigoOut,ast,printast);
 												Semantic semantic1= new Semantic(ast1);
-												semantic1.Semant(CodigoOut,semantic);
+												semantic1.Semant(CodigoOut,semantic,printsemantic);
 												Irt irt1= new Irt (semantic1);
 												irt1.IrPrint(CodigoOut,irt);
 											}else if (target.equals ("codegen")){
@@ -146,7 +148,7 @@ public class Compiler{
 													Ast ast1=new Ast(cc4parser);
 													ast1.AsPrint(CodigoOut,ast,printast);
 													Semantic semantic1= new Semantic(ast1);
-													semantic1.Semant(CodigoOut,semantic);
+													semantic1.Semant(CodigoOut,semantic,printsemantic);
 													Irt irt1= new Irt (semantic1);
 													irt1.IrPrint(CodigoOut,irt);
 													Codegen codegen1= new Codegen(irt1);

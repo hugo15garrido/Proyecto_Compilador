@@ -1,13 +1,17 @@
 class Program {
-  boolean b;
+  boolean p;
   int a;
   int b[5];
-  int j[25];
+  int arre[0];
   int j;
   
-  int abs(int a) {
-    b = a < 0;
+  int abs(int mini, int jota, int numero) {
+	int j, a;
+	int l, m;
+	int k;
+    b = prebsa < 0;
 	b = 2/1+1*-36-25;
+	abs1(a, j, a);
     if (b) {
 	  callout("printf", "%d\n", a*factorial+abs(a));
       return -a;
@@ -21,8 +25,19 @@ class Program {
       return a;
     }
   }
+  void abs1() {
+  }
   
   void main() {
-    abs(-5);
+    abs(a, j);
+	 for i = 0, a {
+      callout("printf", "%d\n", i);
+      if (a == 4) {
+		break;
+      }
+    }
+	for i = 0, 10 {
+      A[i] = i;
+    }
   }
 }

@@ -44,6 +44,10 @@ public class Metodo extends Node{
 		return id;
 	}
 	
+	public String retTipoMet(){
+		return tipo;
+	}
+	
 	public Node retParams(){
 		return parametros;
 	}	
